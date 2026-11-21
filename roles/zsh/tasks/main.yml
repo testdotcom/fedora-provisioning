@@ -4,7 +4,7 @@
     repo: https://github.com/ohmyzsh/ohmyzsh.git
     dest: "{{ oh_my_zsh_dir }}"
     depth: 1
-    update: true
+    version: main
 
 - name: Configure zsh
   ansible.builtin.template:
