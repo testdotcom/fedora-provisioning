@@ -1,13 +1,6 @@
 ---
-- name: Ensure neovim config path exists
-  ansible.builtin.file:
-    path: "{{ nvim_config_dir }}"
-    state: directory
-    mode: "0755"
-
 - name: Configure neovim
-  ansible.builtin.copy:
-    src: nvim/
-    dest: "{{ nvim_config_dir }}/"
-    mode: preserve
-    directory_mode: "0755"
+  ansible.builtin.git:
+    repo: 'https://github.com/testdotcom/neovim-config.git'
+    dest: "{{ nvim_config_dir }}"
+    version: main
