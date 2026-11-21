@@ -1,0 +1,13 @@
+---
+- name: Run system upgrade
+  ansible.builtin.dnf5:
+    name: "*"
+    state: latest
+  become: true
+
+- name: Install packages
+  ansible.builtin.dnf5:
+    name: [neovim, tree-sitter-cli, git, ripgrep, fd-find, gcc, make, unzip, fzf]
+    state: present
+    install_weak_deps: false
+  become: true

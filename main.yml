@@ -1,0 +1,10 @@
+---
+- name: Provision Fedora Machine
+  hosts: localhost
+  roles:
+    - role: system
+      tags: [system]
+    - role: zsh
+      tags: [zsh]
+    - role: neovim
+      tags: [nvim]

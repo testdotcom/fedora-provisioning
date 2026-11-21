@@ -1,0 +1,4 @@
+---
+oh_my_zsh_dir: "{{ ansible_facts['user_dir'] }}/.oh-my-zsh"
+zsh_theme: robbyrussell
+zsh_plugins: [git]
