@@ -7,7 +7,7 @@
 
 - name: Install packages
   ansible.builtin.dnf5:
-    name: [neovim, tree-sitter-cli, git, ripgrep, fd-find, gcc, make, unzip, fzf]
+    name: [neovim, tree-sitter-cli, git, ripgrep, fd-find, gcc, make, unzip, fzf, xz]
     state: present
     install_weak_deps: false
   become: true
